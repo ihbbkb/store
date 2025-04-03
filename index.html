@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,23 +10,23 @@
   <header>
     <h1>iSurX HBrew Store</h1>
     <div class="controls">
-      <input type="text" id="searchInput" placeholder="Search apps..." class="search-input">
+      <input type="text" id="searchInput" placeholder="Search games..." class="search-input">
       <select id="sortSelect" class="sort-select">
         <option value="name-asc">Name (A-Z)</option>
         <option value="name-desc">Name (Z-A)</option>
       </select>
     </div>
   </header>
-  
+
   <nav id="categories">
-    <button class="cat-btn active" onclick="showCategory('game-ports', this)">Game Ports</button>
-    <button class="cat-btn" onclick="showCategory('themes', this)">Themes</button>
-    <button class="cat-btn" onclick="showCategory('tools', this)">Tools</button>
-    <button class="cat-btn" onclick="showCategory('system-info', this)">System Info</button>
+    <a href="index.html" class="cat-btn active">Game Ports</a>
+    <a href="themes.html" class="cat-btn">Themes</a>
+    <a href="tools.html" class="cat-btn">Tools</a>
+    <a href="system-info.html" class="cat-btn">System Info</a>
   </nav>
 
   <main>
-    <section id="game-ports" class="category active">
+    <section class="category active">
       <h2>Game Ports</h2>
       <div class="item">
         <h3>GTA:SA</h3>
@@ -43,12 +42,11 @@
         <h3>max payne</h3>
         <p>Max payne port</p>
         <a href="https://github.com/fgsfdsfgs/max_vita/releases/download/r4/MaxPayne_r4.vpk" class="download-btn">Download</a>
-      </div> </div>
+      </div>
       <div class="item">
         <h3>Simpsons Hit and Run</h3>
         <p>Port of The Simpsons: Hit and Run - An action-adventure game featuring the beloved Simpsons characters</p>
         <a href="https://github.com/ZenoArrows/The-Simpsons-Hit-and-Run/releases/download/v0.6.1/SimpsonsNTSC.vpk" class="download-btn">Download</a>
-      </div>
       </div>
       <div class="item">
         <h3>Portal</h3>
@@ -61,70 +59,7 @@
         <a href="https://github.com/TheOfficialFloW/bully_vita/releases/download/v1.0/Bully.vpk" class="download-btn">Download</a>
       </div>
     </section>
-
-    <section id="themes" class="category">
-      <h2>Themes</h2>
-      <div class="coming-soon">
-        <h1 style="font-size: 48px; text-align: center; margin: 50px 0;">COMING SOON</h1>
-      </div>
-    </section>
-
-    <section id="tools" class="category">
-      <h2>Tools</h2>
-      <div class="item">
-        <h3>VitaShell</h3>
-        <p>Essential file manager and package installer for PS Vita</p>
-        <a href="https://github.com/TheOfficialFloW/VitaShell/releases/download/v2.02/VitaShell.vpk" class="download-btn">Download</a>
-      </div>
-      <div class="item">
-        <h3>Adrenaline</h3>
-        <p>PSP emulator for PS Vita that runs PSP games and homebrew apps</p>
-        <a href="https://github.com/TheOfficialFloW/Adrenaline/releases/download/v7.0/Adrenaline.vpk" class="download-btn">Download</a>
-      </div>
-      <div class="item">
-        <h3>AutoPlugin 2</h3>
-        <p>Easy plugin installer and manager for PS Vita</p>
-        <a href="https://github.com/ONElua/AutoPlugin2/releases/download/1.26/AutoPlugin2.vpk" class="download-btn">Download</a>
-      </div>
-      <div class="item">
-        <h3>PKGj</h3>
-        <p>Free content downloader for PS Vita</p>
-        <a href="https://github.com/blastrock/pkgj/releases/download/v0.54/pkgj.vpk" class="download-btn">Download</a>
-      </div>
-      <div class="item">
-        <h3>vita-save-manager</h3>
-        <p>Tool for backing up and restoring PS Vita save games</p>
-        <a href="https://github.com/d3m3vilurr/vita-savemgr/releases/download/2.0.0/savemgr.vpk" class="download-btn">Download</a>
-      </div>
-      </div>
-    </section>
-
-    <section id="system-info" class="category">
-      <h2>System Information</h2>
-      <div class="system-info-container">
-        <div class="info-item">
-          <h3>IP Address</h3>
-          <p id="ip-address">Loading...</p>
-        </div>
-        <div class="info-item">
-          <h3>Browser</h3>
-          <p id="browser-info">Loading...</p>
-        </div>
-        <div class="info-item">
-          <h3>Operating System</h3>
-          <p id="os-info">Loading...</p>
-        </div>
-        <div class="info-item">
-          <h3>Screen Resolution</h3>
-          <p id="screen-info">Loading...</p>
-        </div>
-        <div class="info-item">
-          <h3>Console Status</h3>
-          <p id="console-status">Loading...</p>
-        </div>
-      </div>
-    </section>
   </main>
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
