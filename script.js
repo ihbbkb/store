@@ -71,17 +71,24 @@ async function updateSystemInfo() {
     document.getElementById('ip-address').textContent = 'Unable to fetch IP';
   }
 
+  // Device Detection
+  const isVita = /playstation vita/i.test(navigator.userAgent);
+  
   // Browser Info
   const browserInfo = navigator.userAgent;
-  document.getElementById('browser-info').textContent = browserInfo;
+  document.getElementById('browser-info').textContent = isVita ? 'PS Vita Browser' : browserInfo;
 
   // OS Info
-  const platform = navigator.platform;
+  const platform = isVita ? 'PlayStation Vita' : navigator.platform;
   document.getElementById('os-info').textContent = platform;
 
   // Screen Info
   const screenInfo = `${window.screen.width}x${window.screen.height}`;
   document.getElementById('screen-info').textContent = screenInfo;
+
+  // Memory Info
+  const memoryInfo = navigator.deviceMemory ? `${navigator.deviceMemory}GB` : 'Not Available';
+  document.getElementById('memory-info').textContent = isVita ? '512MB' : memoryInfo;
 
   // Console Mod Check
   const isConsoleModded = () => {

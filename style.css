@@ -180,6 +180,30 @@ h1 {
   gap: 2rem;
 }
 
+.vita-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.vita-layout .info-item {
+  width: 100%;
+  margin: 0.25rem 0;
+  padding: 0.75rem;
+}
+
+@media screen and (max-width: 960px) {
+  .system-info-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-item {
+    font-size: 14px;
+    padding: 1rem;
+  }
+}
+
 .info-item {
   background: rgba(0, 0, 0, 0.7);
   padding: 1.5rem;
