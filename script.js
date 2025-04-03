@@ -1,15 +1,28 @@
 
-function showCategory(categoryId) {
+function showCategory(categoryId, buttonElement) {
+  // Remove active class from all categories and buttons
   document.querySelectorAll('.category').forEach(cat => {
     cat.classList.remove('active');
   });
   
-  document.getElementById(categoryId).classList.add('active');
-  
   document.querySelectorAll('.cat-btn').forEach(btn => {
     btn.classList.remove('active');
   });
-  event.target.classList.add('active');
+  
+  // Add active class to selected category and button
+  const selectedCategory = document.getElementById(categoryId);
+  if (selectedCategory) {
+    selectedCategory.classList.add('active');
+  }
+  
+  if (buttonElement) {
+    buttonElement.classList.add('active');
+  }
+  
+  // Update system info if that category is selected
+  if (categoryId === 'system-info') {
+    updateSystemInfo();
+  }
   
   filterAndSortItems();
 }
