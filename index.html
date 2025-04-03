@@ -10,12 +10,20 @@
 <body>
   <header>
     <h1>iSurX HBrew Store</h1>
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search apps..." class="search-input">
+      <select id="sortSelect" class="sort-select">
+        <option value="name-asc">Name (A-Z)</option>
+        <option value="name-desc">Name (Z-A)</option>
+      </select>
+    </div>
   </header>
   
   <nav id="categories">
     <button class="cat-btn active" onclick="showCategory('game-ports')">Game Ports</button>
     <button class="cat-btn" onclick="showCategory('themes')">Themes</button>
     <button class="cat-btn" onclick="showCategory('tools')">Tools</button>
+    <button class="cat-btn" onclick="showCategory('system-info')">System Info</button>
   </nav>
 
   <main>
@@ -88,6 +96,32 @@
         <p>Tool for backing up and restoring PS Vita save games</p>
         <a href="https://github.com/d3m3vilurr/vita-savemgr/releases/download/2.0.0/savemgr.vpk" class="download-btn">Download</a>
       </div>
+      </div>
+    </section>
+
+    <section id="system-info" class="category">
+      <h2>System Information</h2>
+      <div class="system-info-container">
+        <div class="info-item">
+          <h3>IP Address</h3>
+          <p id="ip-address">Loading...</p>
+        </div>
+        <div class="info-item">
+          <h3>Browser</h3>
+          <p id="browser-info">Loading...</p>
+        </div>
+        <div class="info-item">
+          <h3>Operating System</h3>
+          <p id="os-info">Loading...</p>
+        </div>
+        <div class="info-item">
+          <h3>Screen Resolution</h3>
+          <p id="screen-info">Loading...</p>
+        </div>
+        <div class="info-item">
+          <h3>Console Status</h3>
+          <p id="console-status">Loading...</p>
+        </div>
       </div>
     </section>
   </main>
